@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="656" height="234" viewBox="0 0 656 234">
+    <g fill="#FF4F4F" fill-rule="evenodd" opacity=".2">
+        <path fill-opacity=".8" d="M0 234L73 96 146 234z"/>
+        <path fill-opacity=".8" d="M93 234L150 126 207 234z"/>
+        <path fill-opacity=".8" d="M154 234L221 82 288 234z"/>
+        <path fill-opacity=".8" d="M226 234L327.5 42 429 234z"/>
+        <path fill-opacity=".807" d="M352 234L431.5 83 511 234z"/>
+        <path d="M448 234L552 0 656 234z"/>
+    </g>
+</svg>

@@ -1,0 +1,69 @@
+
+
+/*===========================
+    21.SCREENSHORS css 
+===========================*/
+
+
+
+
+
+.screenshorts-area{
+	position: relative;
+	z-index: 10;
+	overflow: hidden;
+	padding-bottom: 183px;
+	& .screenshorts-bg{
+		position: absolute;
+		content: '';
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background: rgba(255,134,24,.06);
+	}
+}
+
+
+
+
+.screenshorts-active{
+	& .screenshorts-item{
+		& img{
+			width: 100%;
+			opacity: .2;
+			@include transition(0.3s);
+		}
+	}
+	& .slick-current{
+		& .screenshorts-item{
+			& img{
+				opacity: 1;
+			}
+		}
+	}
+	& .slick-dots{
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: -70px;
+		& li{
+			display: inline-block;
+			& button{
+				height: 16px;
+				width: 16px;
+				border-radius: 50%;
+				border: 0;
+				background: #202442;
+				opacity: .09;
+				margin: 0 7px;
+				font-size: 0;
+			}
+			&.slick-active{
+				& button{
+					opacity: 1;
+				}
+			}
+		}
+	}
+}

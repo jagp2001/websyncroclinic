@@ -1,0 +1,136 @@
+
+
+
+/*===========================
+    5.WHAT WE DO css 
+===========================*/
+
+
+
+
+.what-we-do-area{
+	padding-top: 120px;
+	padding-bottom: 100px;
+	position: relative;
+	z-index: 10;
+	
+	& .what-we-do-bg{
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background: rgba(255,79,79,.06);
+		z-index: -1;
+		& .what-we-do-overlay-1{
+			position: absolute;
+			right: 0;
+			top: 0;
+			z-index: -1;
+			@media #{$md} {
+				width: 30%;
+			}
+			@media #{$xs} {
+				width: 40%;
+			}
+		}
+		& .what-we-do-overlay-2{
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			z-index: -1;
+			@media #{$md} {
+				width: 30%;
+			}
+			@media #{$xs} {
+				width: 40%;
+			}
+		}
+	}
+	&.what-we-do-2-area{
+		& .what-we-do-bg{
+			background: rgba(59,54,222,.06);
+		}
+	}
+}
+
+
+.what-we-do-item{
+	padding-bottom: 20px;
+	& .icon{
+		display: inline-block;
+		height: 220px;
+		width: 220px;
+		background: $white;
+		border-radius: 10px;
+		box-shadow: 20px 14px 48px 0 rgba(144, 121, 121, 0.12);
+		text-align: center;
+		line-height: 220px;
+		position: relative;
+		overflow: hidden;
+		z-index: 5;
+		&::before{
+			position: absolute;
+			content: '';
+			left: 0;
+			top: 0;
+			height: 100%;
+			width: 100%;
+			background: $theme-color;
+			z-index: -1;
+			@include transition(0.4s);
+			opacity: 0;
+		}
+		& svg{
+			height: 100px;
+			width: 100px;
+			& g{
+				& path{
+					@include transition(0.4s);
+				}
+			}
+		}
+	}
+	& a{
+		font-size: 28px;
+		font-weight: 400;
+		color: $text-color;
+		line-height: 1.36;
+		padding-top: 28px;
+		white-space: nowrap;
+		display: block;
+		@media #{$lg} {
+			font-size: 22px;
+		}
+		@media #{$md} {
+			font-size: 22px;
+		}
+		@media #{$xs} {
+			font-size: 20px;
+		}
+		@media #{$sm} {
+			font-size: 22px;
+		}
+	}
+	&:hover{
+		& .icon{
+			&::before{
+				opacity: 1;
+			}
+			& svg{
+				& g{
+					& path{
+						fill: #fff;
+					}
+				}
+			}
+		}
+	}
+	&.what-we-do-2-item{
+		& .icon{
+			&::before{
+				background: $theme-color-2;
+			}
+		}
+	}
+}

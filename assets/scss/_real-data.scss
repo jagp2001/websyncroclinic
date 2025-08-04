@@ -1,0 +1,127 @@
+
+
+
+/*===========================
+    18.REAL DATA css 
+===========================*/
+
+
+
+.real-data-area{
+	padding-bottom: 105px;
+	padding-top: 120px;
+	position: relative;
+	z-index: 10;
+}
+
+
+
+.real-data-shaps{
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -1;
+	height: 100%;
+	width: 100%;
+	& .real-data-shape-1{
+		position: absolute;
+		left: 0;
+		top: 0;
+		@media #{$laptop} {
+			width: 15%;
+		}
+		@media #{$lg} {
+			width: 15%;
+		}
+		@media #{$md} {
+			width: 15%;
+		}
+		@media #{$xs} {
+			width: 15%;
+		}
+		@media #{$sm} {
+			width: 25%;
+		}
+	}
+	& .real-data-shape-2{
+		position: absolute;
+		right: 0;
+		top: 0;
+		@media #{$laptop} {
+			width: 20%;
+		}
+		@media #{$lg} {
+			width: 20%;
+		}
+		@media #{$md} {
+			width: 20%;
+		}
+		@media #{$xs} {
+			width: 20%;
+		}
+		@media #{$sm} {
+			width: 30%;
+		}
+	}
+}
+
+
+
+
+
+
+
+.real-data-item{
+	@media #{$md} {
+		margin-top: 50px;
+	}
+	@media #{$xs} {
+		margin-top: 50px;
+	}
+	& .icon{
+		display: inline-block;
+		height: 80px;
+		width: 80px;
+		text-align: center;
+		line-height: 80px;
+		border-radius: 10px;
+		background: rgba(112,74,255,.08);
+	}
+	& span{
+		display: inline-block;
+		padding-top: 47px;
+		font-size: 24px;
+		color: #9e9696;
+		font-family: $rubik;
+	}
+	& .title{
+		font-size: 58px;
+		font-weight: 300;
+		color: $theme-color-2;
+		padding-top: 17px;
+	}
+	&.item-2{
+		& .icon{
+			background: rgba(254,177,0,.08);
+		}
+		& .title{
+			color: #feb100;
+		}
+	}
+	&.item-3{
+		& .icon{
+			background: rgba(249,70,143,.08);
+		}
+		& .title{
+			color: #f9468f;
+		}
+	}
+	&.item-4{
+		& .icon{
+			background: rgba(73,206,136,.08);
+		}
+		& .title{
+			color: #49ce88;
+		}
+	}
+}

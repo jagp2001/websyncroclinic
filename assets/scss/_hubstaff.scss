@@ -1,0 +1,96 @@
+
+
+
+/*===========================
+    15.HUBSTAFF css 
+===========================*/
+
+
+
+
+.hubstaff-area{
+	margin-bottom: 120px;
+	@media #{$xs} {
+		padding-top: 30px;
+	}
+}
+
+.hubstaff-items{
+	flex-wrap: wrap;
+	@media #{$md} {
+		justify-content: center !important;
+	}
+	@media #{$xs} {
+		justify-content: center !important;
+	}
+	& .item{
+		height: 220px;
+		width: 207px;
+		background: $white;
+		box-shadow: 20px 14px 48px 0 rgba(144, 121, 121, 0.12);
+		border-radius: 10px;
+		padding: 37px 10px 0;
+		position: relative;
+		overflow: hidden;
+		z-index: 10;
+		@media #{$lg} {
+			width: 170px;
+		}
+		@media #{$md} {
+			margin: 30px 15px 0;
+		}
+		@media #{$xs} {
+			margin: 30px 15px 0;
+		}
+		&::before{
+			position: absolute;
+			content: '';
+			left: 0;
+			top: 0;
+			height: 100%;
+			width: 1000%;
+			background: $theme-color-2;
+			z-index: -1;
+			@include transition(0.3s);
+			opacity: 0;
+
+		}
+		& span{
+			display: block;
+			font-size: 22px;
+			line-height: 30px;
+			padding-top: 25px;
+			@include transition(0.3s);
+			color: $heading-color;
+			@media #{$lg} {
+				font-size: 18px;
+				line-height: 28px;
+			}
+		}
+		& svg{
+			& g{
+				& path{
+					@include transition(0.3s);
+				}
+			}
+		}
+		&:hover{
+			&::before{
+				opacity: 1;
+			}
+			& svg{
+				& g{
+					& path{
+						fill: #fff;
+					}
+				}
+			}
+			& span{
+				color: $white;
+			}
+
+
+		}
+	}
+
+}

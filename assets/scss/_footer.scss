@@ -1,0 +1,608 @@
+
+
+
+/*===========================
+    9.FOOTER css 
+===========================*/
+
+
+
+
+
+.footer-area{
+    position: relative;
+    padding-top: 110px;
+    z-index: 10;
+    & .footer-bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(255, 79, 79, 0.08);
+        z-index: -1;
+        & .footer-left{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+            @media #{$laptop} {
+                width: 32%;
+            }
+        }
+        & .footer-right{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            @media #{$laptop} {
+                width: 32%;
+            }
+        }
+    }
+    & .footer-started{
+        @media #{$md} {
+            text-align: center;
+        }
+        @media #{$xs} {
+            text-align: center;
+        }
+        & .title{
+            font-size: 36px;
+            line-height: 46px;
+            & br{
+                @media #{$md} {
+                    display: none;
+                }
+                @media #{$xs} {
+                    display: none;
+                }
+            }
+            @media #{$lg} {
+                font-size: 32px;
+                line-height: 42px;
+            }
+            @media #{$md} {
+                padding-bottom: 20px;
+            }
+            @media #{$xs} {
+                padding-bottom: 20px;
+                font-size: 22px;
+                line-height: 32px;
+            }
+            @media #{$sm} {
+                padding-bottom: 20px;
+                font-size: 30px;
+            }
+        }
+    }
+    & .footer-items{
+        border-top: solid 2px rgba(32, 36, 66, 0.08);
+        margin-top: 45px;
+        padding-top: 28px;
+        & .footer-list{
+            @media #{$lg} {
+                margin-left: 0;
+            }
+            @media #{$md} {
+                margin-left: 0;
+            }
+            @media #{$xs} {
+                margin-left: 0;
+            }
+            & .title{
+                font-size: 24px;
+                line-height: 32px;
+                padding-bottom: 3px;
+            }
+            & ul{
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+                & li{
+                    & a{
+                        font-size: 20px;
+                        color: #232423;
+                        opacity: .7;
+                        padding-top: 26px;
+                        display: inline-block;
+                        @media #{$xs} {
+                            font-size: 16px;
+                        }
+                        &:hover{
+                            color: $theme-color;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+        & .footer-about{
+            margin-left: 98px;
+            @media #{$lg} {
+                margin-left: 0;
+            }
+            @media #{$md} {
+                margin-left: 0;
+            }
+            @media #{$xs} {
+                margin-left: 0;
+            }
+            & .title{
+                font-size: 24px;
+                line-height: 32px;
+                padding-bottom: 18px;
+            }
+            & p{
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            & ul{
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+                display: -webkit-flex;
+                display: -moz-flex;
+                display: -ms-flex;
+                display: -o-flex;
+                display: flex;
+                justify-content: space-between;
+                @media #{$md} {
+                    justify-content: flex-start;
+                }
+                @media #{$xs} {
+                    justify-content: flex-start;
+                }
+                & li{
+                    & a{
+                        height: 43px;
+                        width: 43px;
+                        text-align: center;
+                        line-height: 39px;
+                        border-radius: 50%;
+                        border: solid 1px #979797;
+                        display: inline-block;
+                        @media #{$md} {
+                            margin-right: 10px;
+                        }
+                        @media #{$xs} {
+                            margin-right: 10px;
+                        }
+                        & svg{
+                            & path{
+                                @include transition(0.3s);
+                            }
+                        }
+                        &:hover{
+                            background: $theme-color;
+                            border-color: $theme-color;
+                            & svg{
+                                & path{
+                                    fill: $white;
+                                }
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+        & .footer-about-1{
+            & p{
+                opacity: .7;
+                padding-right: 24px;
+                padding-top: 34px;
+                @media #{$lg} {
+                    padding-right: 0;
+                }
+                @media #{$md} {
+                    padding-right: 0;
+                }
+                @media #{$xs} {
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+    & .footer-copyright{
+        & p{
+            font-size: 22px;
+            line-height: 1.18;
+            color: #272727;
+            margin: 0;
+            @media #{$xs} {
+                font-size: 18px;
+            }
+            & span{
+                color: $theme-color;
+                
+            }
+        }
+    }
+    &.footer-2-area{
+        padding-top: 88px;
+        & .footer-items{
+            margin: 0;
+            padding: 0;
+            border: 0 !important;
+        }
+        & .footer-copyright{
+            border-top: 1px solid rgba(32,36,66,.08);
+            padding: 22px 0;
+            margin-top: 100px;
+
+            & p{
+                & span{
+                    color: $theme-color-2;
+                }
+            }
+        }
+        & .footer-items{
+            & .footer-about{
+                & ul{
+                    & li{
+                        & a{
+                            &:hover{
+                                border-color: $theme-color-2;
+                                background: $theme-color-2;
+
+                            }
+                        }
+                    }
+                }
+            }
+            & .footer-list{
+                & ul{
+                    & li{
+                        & a{
+                            &:hover{
+                                color: $theme-color-2;
+                                opacity: 1;
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.footer-4-area{
+            position: relative;
+            z-index: 10;
+            padding-top: 0;
+            & .footer-bg{
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                z-index: -1;
+                background-image: url(../images/footer-shape.png);
+                background-size: 100% 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-color: transparent;
+            }
+            & .footer-projects{
+                margin-bottom: 60px;
+                padding: 80px;
+                background-size: 100% 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url(../images/footer-projects-bg.png);
+                @media #{$xs} {
+                    padding: 30px;
+                }
+                & .projects-content{
+                    & span{
+                        font-size: 16px;
+                        font-weight: 500;
+                        font-family: $rubik;
+                        color: $white;
+                    }
+                    & .title{
+                        font-size: 36px;
+                        line-height: 46px;
+                        font-weight: 500;
+                        color: $white;
+                        margin-top: 7px;
+                        @media #{$xs} {
+                            font-size: 30px;
+                        }
+                    }
+                }
+                & .projects-btn{
+                    @media #{$xs} {
+                        margin-top: 20px;
+                    }
+                    & a{
+                        background: transparent;
+                        border: 2px solid $white;
+                        color: $white;
+                        &:hover{
+                            background: $white;
+                            color: $theme-color-2;
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+    &.footer-3-area{
+        padding-top: 88px;
+        & .footer-items{
+            margin: 0;
+            padding: 0;
+            border: 0 !important;
+        }
+        & .footer-copyright{
+            border-top: 1px solid rgba(32,36,66,.08);
+            padding: 22px 0;
+            margin-top: 100px;
+
+            & p{
+                & span{
+                    color: $theme-color;
+                }
+            }
+        }
+        & .footer-items{
+            & .footer-about{
+                & ul{
+                    & li{
+                        & a{
+                            &:hover{
+                                border-color: $theme-color;
+                                background: $theme-color;
+
+                            }
+                        }
+                    }
+                }
+            }
+            & .footer-list{
+                & ul{
+                    & li{
+                        & a{
+                            &:hover{
+                                color: $theme-color;
+                                opacity: 1;
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+    & .footer-box{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+    &.footer-6-area{
+        padding-top: 82px;
+        & .footer-items{
+            & .footer-about{
+                margin-left: -2px;
+                & ul{
+                    & li{
+                        & a{
+                            @media #{$lg} {
+                                height: 35px;
+                                width: 35px;
+                                line-height: 32px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.footer-7-area{
+        position: relative;
+        z-index: 10;
+        & .footer-items{
+            & .footer-about-1{
+                color: $white;
+                margin-right: -30px;
+                @media #{$md} {
+                    margin-right: 0;
+                }
+                @media #{$xs} {
+                    margin-right: 0;
+                }
+                & p{
+                    opacity: 1;
+                    padding-right: 0;
+                }
+            }
+            & .footer-list{
+                margin-left: 75px;
+                @media #{$lg} {
+                    margin-left: 30px;
+                }
+                @media #{$md} {
+                    margin-left: 0px;
+                }
+                @media #{$xs} {
+                    margin-left: 0px;
+                }
+                & .title{
+                    color: $white;
+                }
+                & ul{
+                    & li{
+                        & a{
+                            color: $white;
+                            opacity: 1;
+                            &:hover{
+                                color: $theme-color;
+                            }
+                        }
+                    }
+                }
+            }
+            & .footer-about{
+                color: $white;
+                & .title{
+                    color: $white;
+                }
+                & ul{
+                    & li{
+                        & a{
+                            border-color: $white;
+                            & svg{
+                                & path{
+                                    fill: $white;
+                                }
+                            }
+                            &:hover{
+                                border-color: $white;
+                                background: $white;
+                                & svg{
+                                    & path{
+                                        fill: $theme-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .footer-copyright{
+            border-top: 2px solid rgba(255,255,255,.08);
+            & p{
+                color: $white;
+                & span{
+                    color: $theme-color;
+                }
+            }
+        }
+    }
+}
+
+
+.subscribe-area{
+    padding-top: 106px;
+    padding-bottom: 120px;
+    position: relative;
+    z-index: 10;
+    & .subscribe-bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: $theme-color-2;
+        z-index: -1;
+        &::before{
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-image: url(../images/subscribe-map.png);
+            background-size: 100% 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-top: 102px;
+        }
+    }
+    & .subscribe-content{
+        & .title{
+            font-size: 46px;
+            line-height: 60px;
+            color: $white;
+            padding-bottom: 15px;
+            & br{
+                @media #{$xs} {
+                    display: none;
+                }
+            }
+            @media #{$xs} {
+                font-size: 28px;
+                line-height: 38px;
+            }
+            @media #{$sm} {
+                font-size: 34px;
+                line-height: 44px;
+            }
+        }
+        & a{
+            background: $white;
+            color: $heading-color;
+            border: 1px solid $white;
+            &:hover{
+                background-color: transparent;
+                color: $white;
+                border-color: $white;
+            }
+        }
+    }
+    &.subscribe-3-area{
+        & .subscribe-bg{
+            background: $theme-color;
+        }
+    }
+    &.subscribe-5-area{
+        .subscribe-bg{
+            &::before{
+                display: none;
+            }
+            & .subscribe-shape-1{
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: -1;
+            }
+            & .subscribe-shape-2{
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                z-index: -1;
+            }
+        }
+    }
+}
+
+
+
+
+
+/*==== BACK TO TOP ====*/
+
+.back-to-top {
+    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: $theme-color;
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    border-radius: 50%;
+    @include transition(0.3s);
+    cursor: pointer;
+    box-shadow: 0 6px 14px 0 rgba(0, 0, 0, 0.09);
+
+    & i {
+        color: $white;
+    }
+
+    &:hover {
+        background-color: $theme-color;
+    }
+    &.back-to-top-2{
+        background: $theme-color-2;
+    }
+}
+
+

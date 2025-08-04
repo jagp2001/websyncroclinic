@@ -1,0 +1,172 @@
+
+
+
+/*===========================
+    16.TEAM css 
+===========================*/
+
+
+
+.team-5-area{
+
+}
+
+
+.team-5-item{
+	border-radius: 10px;
+	overflow: hidden;
+	@include transition(0.3s);
+	& .team-thumb{
+		position: relative;
+		overflow: hidden;
+		&::before{
+			position: absolute;
+			content: '';
+			left: 0;
+			top: 0;
+			height: 100%;
+			width: 100%;
+			background: #6236ff;
+			opacity: 0;
+			@include transition(0.3s);
+		}
+		& img{
+			width: 100%;
+			@include transition(0.3s);
+		}
+		& ul{
+			z-index: 2;
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			bottom: 140px;
+			opacity: 1;
+			width: 100%;
+			text-align: center;
+			opacity: 1;
+			@include transition(0.5s);
+			padding: 0;
+			& li{
+				margin: 0 16px;
+				display: inline-block;
+				& a{
+					margin-top: 0;
+					opacity: 0;
+				}
+				&:nth-child(1){
+					& a{
+						transition: all linear 0.3s .1s;
+					}
+				}
+				&:nth-child(2){
+					& a{
+						transition: all linear 0.3s .3s;
+					}
+				}
+				&:nth-child(3){
+					& a{
+						transition: all linear 0.3s .5s;
+					}
+				}
+			}
+		}
+	}
+	& .team-contnet{
+		padding-top: 42px;
+		padding-bottom: 44px;
+		border: solid 2px rgba(151, 151, 151, 0.15);
+		border-radius: 0 0 10px 10px;
+		border-top: 0;
+		@include transition(0.3s);
+		& .title{
+			font-size: 34px;
+			line-height: 46px;
+			margin: 0;
+		}
+		& span{
+			display: inline-block;
+			padding-top: 10px;
+			font-weight: 700;
+			font-size: 20px;
+			color: $theme-color;
+			font-family: $rubik;
+		}
+	}
+	&:hover{
+		box-shadow: 0px 14px 35px 0 rgba(144, 121, 121, 0.12);
+		& .team-thumb{
+			&::before{
+				opacity: .7;
+				z-index: 1;
+			}
+			& img{
+				transform: scale(1.1);
+			}
+			& ul{
+				bottom: 168px;
+				& li{
+					& a{
+						margin-top: -30px;
+						opacity: 1;
+					}
+				}
+			}
+		}
+		& .team-contnet{
+			border-color: #fff;
+		}
+	}
+	&.team-2-item{
+		padding-top: 30px;
+		& .team-thumb{
+			text-align: center;
+			&::before{
+				display: none;
+			}
+			& img{
+				width: auto;
+				transform: scale(1);
+			}
+			& ul{
+				background: $theme-color;
+				display: inline-block;
+				width: 235px;
+				border-radius: 5px;
+				bottom: -50px;
+                opacity: 0;
+				& li{
+					margin: 20px 18px;
+					& a{
+
+					}
+				}
+			}
+		}
+		& .team-contnet{
+			border: 0;
+			box-shadow: none;
+		}
+		&:hover{
+			& .team-thumb{
+				& ul{
+					bottom: 20px;
+                    opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+
+
+.team-v1-area{
+	& .team-5-item{
+		border: solid 2px rgba(151, 151, 151, 0.15);
+		overflow: hidden;
+		& .team-thumb{
+			&::before{
+				background: #f65954;
+			}
+		}
+	}
+}

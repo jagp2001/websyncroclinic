@@ -1,0 +1,75 @@
+
+
+
+/*===========================
+    11.WORKING PROCESS css 
+===========================*/
+
+
+
+
+.working-process-area{
+	padding-top: 0px;
+	padding-bottom: 120px;
+	@media #{$xs} {
+		padding-bottom: 40px;
+	}
+}
+
+
+.working-process-item{
+	padding: 46px 25px 37px;
+	border-radius: 10px;
+	position: relative;
+	overflow: hidden;
+	@include transition(0.3s);
+	@media #{$lg} {
+		padding: 46px 10px 42px;
+	}
+	@media #{$xs} {
+		padding: 46px 15px 42px;
+	}
+	&::before{
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		height: 0px;
+		width: 100%;
+		background: $theme-color-2;
+		@include transition(0.3s);
+	}
+	& .title{
+		font-size: 20px;
+		line-height: 36px;
+		padding-top: 38px;
+		@media #{$lg} {
+			font-size: 16px;
+		}
+		@media #{$xs} {
+			font-size: 18px;
+		}
+	}
+	& .icon{
+		height: 115px;
+		width: 130px;
+		display: inline-block;
+		line-height: 115px;
+		position: relative;
+		& .shape{
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			height: 115px;
+			width: 132px;
+		}
+	}
+	&:hover{
+		background: $white;
+		box-shadow: 0 10px 52px 5px rgba(98, 54, 255, 0.08);
+		&::before{
+			height: 10px;
+		}
+	}
+}

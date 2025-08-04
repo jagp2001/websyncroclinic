@@ -1,0 +1,79 @@
+
+
+/*===========================
+    25.DOWNLOAD css 
+===========================*/
+
+
+
+
+.download-area{
+	position: relative;
+	z-index: 10;
+	padding-top: 108px;
+	padding-bottom: 120px;
+	background: #f4f7fc;
+	.download-bg{
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		z-index: -1;
+		background: rgba(255,134,24,.06);
+		& .download-shape-1{
+			position: absolute;
+			left: 0;
+			bottom: 0;
+		}
+		& .download-shape-2{
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+	}
+}
+
+.download-content{
+	& .title{
+		font-size: 46px;
+		line-height: 60px;
+		padding-bottom: 35px;
+		@media #{$xs} {
+			font-size: 34px;
+			line-height: 44px;
+		}
+	}
+	& ul{
+		& li{
+			display: inline-block;
+			@media #{$xs} {
+				margin-top: 20px;
+			}
+			@media #{$sm} {
+				margin-top: 0px;
+			}
+			& a{
+				margin: 0 12px;
+				border-radius: 30px;
+				border: 2px solid $theme-color-3;
+				background: $theme-color-3;
+				color: $white;
+				width: 204px;
+				&:hover{
+					background-color: transparent;
+					color: $theme-color-3;
+					border-color: $theme-color-3;
+				}
+				&.main-btn-2{
+					background-color: transparent;
+					color: $theme-color-3;
+					&:hover{
+						background: $theme-color-3;
+						color: $white;
+					}
+				}
+			}
+		}
+	}
+}

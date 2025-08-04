@@ -1,0 +1,119 @@
+
+
+
+/*===========================
+    7.FUN FACTS css 
+===========================*/
+
+
+
+
+
+.fun-facts-area{
+	padding-top: 70px;
+	padding-bottom: 116px;
+	position: relative;
+	z-index: 10;
+	& .fun-facts-shaps{
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		z-index: -1;
+		background: rgba(255,79,79,.05);
+		& .fun-facts-shape-1{
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			z-index: -1;
+		}
+		& .fun-facts-shape-2{
+			position: absolute;
+			right: 0;
+			top: 0;
+			z-index: -1;
+		}
+	}
+	&.fun-facts-2-area{
+		& .fun-facts-shaps{
+			background: rgba(59,54,222,.06);
+		}
+	}
+	& .fun-facts-line{
+		position: relative;
+		& > img{
+			position: absolute;
+			left: 50%;
+			top: 46%;
+			transform: translate(-50%, -50%);
+			@media #{$lg} {
+				width: 90%;
+				top: 34%;
+			}
+			@media #{$md} {
+				display: none;
+			}
+			@media #{$xs} {
+				display: none;
+			}
+		}
+	}
+}
+
+.fun-facts-item{
+	& .icon{
+		height: 160px;
+		width: 160px;
+		text-align: center;
+		line-height: 160px;
+		background: rgba(255,79,79,.1);
+		border-radius: 50%;
+		display: inline-block;
+		z-index: 10;
+		position: relative;
+		&::before{
+			position: absolute;
+			content: '';
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			height: 130px;
+			width: 130px;
+			background: $white;
+			border-radius: 50%;
+			z-index: -1;
+		}
+		&::after{
+			position: absolute;
+			content: '';
+			right: 15px;
+			bottom: 15px;
+			height: 58px;
+			width: 58px;
+			border-radius: 50%;
+			z-index: -2;
+			opacity: 0.66;
+			-webkit-filter: blur(32px);
+			filter: blur(32px);
+			background-color: #ff4f4f;
+		}
+	}
+	& .title{
+		font-size: 34px;
+		line-height: 46px;
+		padding-top: 22px;
+	}
+	& > span{
+		font-size: 20px;
+		color: $heading-color;
+		font-family: $rubik;
+	}
+	&.fun-facts-2-item{
+		& .icon{
+			&::after{
+				background-color: $theme-color-2;
+			}
+		}
+	}
+}

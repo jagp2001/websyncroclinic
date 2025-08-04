@@ -1,0 +1,68 @@
+
+
+/*===========================
+    26.HISTORY css 
+===========================*/
+
+
+
+.history-area{}
+.history-thumb{
+	& img{
+		@media #{$md} {
+			width: 100%;
+		}
+		@media #{$xs} {
+			width: 100%;
+		}
+	}
+}
+
+
+
+.history-content{
+	margin-top: 48px;
+	margin-left: -30px;
+	@media #{$lg} {
+		margin-left: 0;
+		margin-top: 30px;
+	}
+	@media #{$md} {
+		margin-left: 0;
+		margin-top: 30px;
+	}
+	@media #{$xs} {
+		margin-left: 0;
+		margin-top: 30px;
+	}
+	& > span{
+		line-height: 55px;
+		width: 245px;
+		background: rgba(255,79,79,.05);
+		display: inline-block;
+		text-align: center;
+		border-radius: 35px;
+		font-size: 20px;
+		font-weight: 700;
+		color: $theme-color;
+		font-family: $rubik;
+	}
+	& .title{
+		font-size: 42px;
+		line-height: 60px;
+		font-weight: 400;
+		padding-top: 28px;
+		padding-bottom: 27px;
+		@media #{$xs} {
+			font-size: 26px;
+			line-height: 36px;
+		}
+		@media #{$sm} {
+			font-size: 42px;
+			line-height: 52px;
+		}
+		& span{
+			font-weight: 700;
+		}
+	}
+}

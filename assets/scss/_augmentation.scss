@@ -1,0 +1,189 @@
+
+
+
+/*===========================
+    12.AUGMENTATION css 
+===========================*/
+
+
+
+
+.augmentation-area{
+	position: relative;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-top: 290px;
+	padding-bottom: 390px;
+	@media #{$laptop} {
+		padding-top: 90px;
+		padding-bottom: 90px;
+		margin-top: 100px;
+		margin-bottom: 100px;
+	}
+	@media #{$lg} {
+		padding-top: 90px;
+		padding-bottom: 90px;
+	}
+	@media #{$md} {
+		padding-top: 0px;
+		padding-bottom: 0;
+	}
+	@media #{$xs} {
+		padding-top: 0px;
+		padding-bottom: 0;
+	}
+	& .augmentation-content{
+		padding-left: 70px;
+		@media #{$md} {
+			margin-bottom: 30px;
+		}
+		@media #{$xs} {
+			margin-bottom: 30px;
+			padding-left: 0;
+		}
+		& .title{
+			font-size: 28px;
+			line-height: 38px;
+			padding-bottom: 17px;
+			& span{
+				font-weight: 400;
+			}
+		}
+		& a{
+			font-size: 18px;
+			font-weight: 500;
+			color: $theme-color-2;
+			margin-top: 37px;
+			display: inline-block;
+			& img{
+				padding-left: 14px;
+			}
+		}
+	}
+	& .augmentation-thumb{
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 50%;
+		@media #{$laptop} {
+			width: 47%;
+		}
+		@media #{$md} {
+			position: static;
+			transform: translateY(0);
+			width: 100%;
+		}
+		@media #{$xs} {
+			position: static;
+			transform: translateY(0);
+			width: 100%;
+		}
+	}
+	& .augmentation-shape{
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 50%;
+		@media #{$laptop} {
+			width: 47%;
+		}
+		@media #{$md} {
+			display: none;
+		}
+		@media #{$xs} {
+			display: none;
+		}
+	}
+}
+
+
+
+
+.augmentation-7-area{
+	margin-top: 86px;
+	padding-bottom: 57px;
+	overflow: hidden;
+}
+
+
+
+
+
+.augmentation-7-item{
+	& .augmentation-7-thumb{
+	margin-left: -80px;
+	margin-right: 70px;
+	@media #{$md} {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	@media #{$xs} {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	& img{
+		width: 100%;
+		}
+	}
+	& .augmentation-7-content{
+		margin-left: -25px;
+		padding-right: 40px;
+		@media #{$lg} {
+			padding-right: 0;
+			margin-left: 0;
+		}
+		@media #{$md} {
+			padding-right: 0;
+			margin-left: 0;
+		}
+		@media #{$xs} {
+			padding-right: 0;
+			margin-left: 0;
+		}
+		& .title{
+			font-weight: 400;
+			font-size: 42px;
+			line-height: 60px;
+			padding-bottom: 17px;
+			& span{
+				font-weight: 700;
+				color: $theme-color;
+			}
+		}
+	}
+	&.item-2{
+		@media #{$md} {
+			margin-top: 100px;
+			 padding-bottom: 60px;
+		}
+		@media #{$xs} {
+			margin-top: 100px;
+			 padding-bottom: 60px;
+		}
+		& .augmentation-7-thumb{
+			margin-left: 70px;
+			margin-right: -80px;
+			@media #{$md} {
+				margin-left: 0;
+				margin-right: 0;
+			}
+			@media #{$xs} {
+				margin-left: 0;
+				margin-right: 0;
+			}
+
+
+		}
+	}
+
+}
+
+
+
+
+
+
+
+

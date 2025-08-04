@@ -1,0 +1,303 @@
+
+
+/*===========================
+    30.LOGIN css 
+===========================*/
+
+
+
+
+
+
+
+
+.login-area{
+	position: relative;
+	z-index: 10;
+	&::before{
+		position: absolute;
+		content: '';
+		right: 0;
+		top: 0;
+		height: 100%;
+		width: 49%;
+		background-image: url(../images/login-bg.jpg);
+		background-size: 100% 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		z-index: -1;
+		@media #{$laptop} {
+			background-size: cover;
+		}
+		@media #{$md} {
+			width: 0;
+		}
+		@media #{$xs} {
+			width: 0;
+		}
+	}
+	& .login-bg{
+		position: absolute;
+		z-index: -2;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background: rgba(255,79,79,.06);
+		& .login-shape{
+			position: absolute;
+			left: 0;
+			bottom: 80px;
+		}
+		&::before{
+			position: absolute;
+			content: '';
+			left: 405px;
+			top: 165px;
+			height: 82px;
+			width: 82px;
+			border-radius: 50%;
+			background: rgba(255,79,79,.08);
+			@media #{$xs} {
+				left: 200px;
+			}
+			@media #{$md} {
+				left: 200px;
+			}
+		}
+		&::after{
+			position: absolute;
+			content: '';
+			left: 800px;
+			top: 100px;
+			height: 25px;
+			width: 25px;
+			border-radius: 50%;
+			background: rgba(255,79,79,.08);
+			@media #{$xs} {
+				left: 270px;
+			}
+			@media #{$md} {
+				left: 300px;
+			}
+		}
+	}
+	& .copyright-item{
+		& p{
+			font-size: 18px;
+			opacity: .3;
+			color: $text-color; 
+			& span{
+				color: $theme-color;
+			}
+		}
+	}
+	&.singup-area{
+		&::before{
+			background-image: url(../images/singup-bg.png);
+		}
+	}
+}
+
+
+
+.login-title{
+	padding-top: 202px;
+
+	& .title{
+		font-size: 60px;
+		line-height: 76px;
+		padding-bottom: 10px;
+		margin: 0;
+		@media #{$md} {
+			padding-right: 50px;
+		}
+		@media #{$xs} {
+			font-size: 38px;
+			line-height: 48px;
+		}
+		@media #{$sm} {
+			font-size: 60px;
+			line-height: 76px;
+		}
+		& span{
+			color: $theme-color;
+		}
+	}
+	& p{
+		@media #{$xs} {
+			font-size: 15px;
+		}
+	}
+}
+
+.login-form{
+	& .input-box{
+		& input{
+			width: 100%;
+			border: solid 2px rgba(102, 102, 102, 0.12);
+			border-radius: 5px;
+			line-height: 60px;
+			padding-left: 30px;
+			background-color: transparent;
+		}
+		& button{
+			width: 100%;
+			border: 2px solid $theme-color;
+			line-height: 60px;
+			width: 100%;
+			background: $theme-color;
+			&:hover{
+				background-color: transparent;
+				color: $theme-color;
+			}
+		}
+		& a{
+			width: 100%;
+			background-color: transparent;
+			border: solid 2px rgba(102, 102, 102, 0.12);
+			color: $heading-color;
+			margin-top: 30px;
+			padding: 0;
+			& svg{
+				margin-right: 10px;
+				height: 40px;
+				width: 40px;
+			}
+		}
+		& ul{
+			display: flex;
+			justify-content: space-between;
+			margin: 20px 0 0;
+			padding: 0;
+			list-style-type: none;
+			& li{
+				display: inline-block;
+				height: 5px;
+				width: 15%;
+				background: rgba(102, 102, 102, 0.12);
+				border-radius: 10px;
+			}
+		}
+	}
+	& .input-btns{
+		& a{
+			color: $theme-color;
+			opacity: .8;
+			&:hover{
+				opacity: 1;
+			}
+		}
+	}
+	& .create-account-link{
+		& span{
+			font-size: 20px;
+			font-family: $rubik;
+			@media #{$xs} {
+				font-size: 18px;
+			}
+			& a{
+				color: $theme-color;
+			}
+		}
+	 }
+}
+
+
+
+
+.checkbox_common{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.checkbox_common li label {
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-weight: 400;
+    color: $text-color;
+    opacity: .8;
+    & a{
+    	text-decoration: underline;
+    }
+}
+
+.checkbox_common li input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox_common li input[type="checkbox"]+label span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: -1px 15px 0 0;
+    vertical-align: middle;
+    cursor: pointer;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 2px solid rgba(102, 102, 102, 0.12);
+    position: relative;
+}
+
+.checkbox_common li input[type="checkbox"]+label span:before {
+    color: #fff;
+    content: "\f00c";
+    font-family: 'Font Awesome 5 Pro';
+    font-size: 11px;
+    position: absolute;
+    text-align: center;
+    left: 3px;
+    top: -7px;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+}
+
+.checkbox_common li input[type="checkbox"]:checked+label span {
+    background: #2079ff;
+    border-color: rgba(102, 102, 102, 0.12);
+}
+
+.checkbox_common li input[type="checkbox"]:checked+label span:before {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+
+.checkbox_common li input[type="checkbox"]+label span,
+.checkbox_common li input[type="checkbox"]:checked+label span {
+    -webkit-transition: background-color 0.2s linear;
+    -o-transition: background-color 0.2s linear;
+    -moz-transition: background-color 0.2s linear;
+    transition: background-color 0.2s linear;
+}
+
+
+
+
+
+
+
+
+
+.checkbox_style5 li input[type="checkbox"] + label span::before {
+    color: $theme-color;
+}
+.checkbox_style5 li input[type="checkbox"] + label span {
+  border-radius: 5px;
+}
+.checkbox_style5 li input[type="checkbox"]:checked + label span {
+  background: transparent;
+}

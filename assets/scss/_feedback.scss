@@ -1,0 +1,109 @@
+
+
+/*===========================
+    19.FRRDBACK css 
+===========================*/
+
+
+
+
+.feedback-area{
+	padding-bottom: 60px;
+	@media #{$xs} {
+		overflow: hidden;
+	}
+}
+
+
+
+.feedback-slide{
+	& .feedback-item{
+		padding: 60px 135px 53px;
+		margin: 40px 80px 60px;
+		position: relative;
+		z-index: 10;
+		@media #{$lg} {
+			padding: 60px 30px 53px;
+		}
+		@media #{$md} {
+			padding: 60px 30px 53px;
+			margin: 40px 30px 60px;
+		}
+		@media #{$xs} {
+			padding: 60px 15px 53px;
+			margin: 40px 0px 60px;
+		}
+		@media #{$sm} {
+			padding: 60px 30px 53px;
+			margin: 40px 0px 60px;
+		}
+		& .feedback-bg{
+			position: absolute;
+			left: 0;
+			top: 0;
+			height: 100%;
+			width: 100%;
+			box-shadow: 0 20px 64px 0 rgba(144, 121, 121, 0.12);
+			background: $white;
+			border-radius: 25px;
+			z-index: -1;
+
+		}
+		& img{
+			display: inline-block;
+		}
+		& .text{
+			padding-top: 20px;
+			padding-bottom: 25px;
+		}
+		& .title{
+			font-size: 26px;
+			line-height: 46px;
+			padding-top: 5px;
+		}
+		& span{
+			font-size: 20px;
+			color: #202442;
+			opacity: .25;
+		}
+		& .user{
+			display: inline-block;
+			max-width: 80px;
+			& img{
+				border-radius: 50%;
+			}
+		}
+	}
+	& .slick-current{
+		z-index: 99;
+	}
+	& .slick-arrow{
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		cursor: pointer;
+		z-index: 99;
+		font-size: 32px;
+		color: #000;
+		opacity: .2;
+		@include transition(0.3s);
+		&:hover{
+			opacity: 1;
+		}
+		&.prev{
+			left: -50px;
+			@media #{$md} {
+				left: 0;
+			}
+			@media #{$xs} {
+				left: 0;
+			}
+		}
+		&.next{
+			right: -50px;
+			@media #{$md} {
+				right: 0;
+			}
+		}
+	}
+}

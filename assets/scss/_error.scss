@@ -1,0 +1,38 @@
+
+
+/*===========================
+    31.ERROR css 
+===========================*/
+
+
+
+.error-area{
+	position: relative;
+	z-index: 10;
+	padding-top: 274px;
+	padding-bottom: 167px;
+}
+
+
+.error-content{
+	& .title{
+		font-size: 60px;
+		line-height: 76px;
+		padding-top: 48px;
+	}
+	& span{
+		display: block;
+		padding: 17px 0 33px;
+	}
+	& a{
+		width: 220px;
+		line-height: 60px;
+		background: $theme-color;
+		color: $white;
+		border: 2px solid $theme-color;
+		&:hover{
+			background-color: transparent;
+			color: $theme-color;
+		}
+	}
+}

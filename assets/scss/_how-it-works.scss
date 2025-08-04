@@ -1,0 +1,126 @@
+
+
+/*===========================
+    23.HOW IT WORKS css 
+===========================*/
+
+
+
+
+.how-it-works-area{
+	position: relative;
+	padding-top: 116px;
+	padding-bottom: 78px;
+	&::before{
+		position: absolute;
+		content: '';
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background: #ff8618;
+		opacity: .06;
+	}
+}
+
+
+.how-it-works-content{
+	position: relative;
+	& .line{
+		position: absolute;
+		right: 200px;
+		top: 40px;
+		width: 312px;
+		height: 2px;
+		border-bottom: 2px dashed $theme-color-3;
+		opacity: .3;
+		@media #{$xs} {
+			right: 0;
+			width: 130px;
+		}
+		@media #{$sm} {
+			width: 300px;
+		}
+		&::before{
+			position: absolute;
+			content: '';
+			left: -11px;
+			top: -6px;
+			height: 13px;
+			width: 13px;
+			border: 2px solid $theme-color-3;
+			border-radius: 50%;
+		}
+		&::after{
+			position: absolute;
+			content: '';
+			right: -11px;
+			top: -6px;
+			height: 13px;
+			width: 13px;
+			border: 2px solid $theme-color-3;
+			border-radius: 50%;
+		}
+	}
+	& span{
+		height: 78px;
+		width: 78px;
+		text-align: center;
+		line-height: 78px;
+		background: rgba(255,134,24,1);
+		display: inline-block;
+		font-size: 36px;
+		font-family: $rubik;
+		font-weight: 400;
+		color: $white;
+		border-radius: 50%;
+		position: relative;
+		z-index: 5;
+		&::before{
+			position: absolute;
+			content: '';
+			left: 0;
+			top: 0;
+			height: 100%;
+			width: 100%;
+			border-radius: 50%;
+			background: #ff8618;
+			z-index: -1;
+			animation: pulse-border-2 2s linear infinite;
+		}
+	}
+	& .title{
+		font-size: 42px;
+		line-height: 60px;
+		font-weight: 400;
+		padding-right: 60px;
+		padding-top: 25px;
+		padding-bottom: 9px;
+		@media #{$xs} {
+			padding-right: 0;
+			font-size: 30px;
+			line-height: 40px;
+		}
+	}
+	& .text{
+		padding-right: 40px;
+		@media #{$xs} {
+			padding-right: 0;
+		}
+	}
+}
+
+.how-it-works-thumb{
+	margin-left: -30px;
+	@media #{$md} {
+		margin-left: 0;
+		margin-top: 50px;
+	}
+	@media #{$xs} {
+		margin-left: 0;
+		margin-top: 50px;
+	}
+	& img{
+		width: 100%;
+	}
+}

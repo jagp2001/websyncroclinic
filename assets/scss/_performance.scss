@@ -1,0 +1,228 @@
+
+
+
+/*===========================
+    14.PERFOMANCE css 
+===========================*/
+
+
+
+
+.performance-area{
+	position: relative;
+	margin-top: 10px;
+	margin-bottom: 70px;
+	padding-top: 290px;
+	padding-bottom: 390px;
+	@media #{$laptop} {
+		padding-top: 90px;
+		padding-bottom: 90px;
+		margin-top: 100px;
+		margin-bottom: 100px;
+	}
+	@media #{$lg} {
+		padding-top: 90px;
+		padding-bottom: 90px;
+	}
+	@media #{$md} {
+		padding-top: 94px;
+		padding-bottom: 55px;
+		margin-bottom: 0;
+	}
+	@media #{$xs} {
+		padding-top: 94px;
+		padding-bottom: 55px;
+		margin-bottom: 0;
+	}
+	& .performance-content{
+		font-weight: 300;
+		@media #{$md} {
+			margin-bottom: 30px;
+		}
+		@media #{$xs} {
+			margin-bottom: 30px;
+		}
+		& .title{
+			font-size: 42px;
+			line-height: 60px;
+			padding-bottom: 29px;
+			@media #{$xs} {
+				font-size: 38px;
+				line-height: 48px;
+			}
+			& span{
+				font-weight: 400;
+			}
+		}
+		& .input-box{
+			margin-top: 45px;
+			display: flex;
+			@media #{$xs} {
+				display: block;
+			}
+			@media #{$sm} {
+				display: flex;
+			}
+			& input{
+				height: 60px;
+				width: 318px;
+				border-radius: 5px;
+				border: solid 2px rgba(102, 102, 102, 0.12);
+				padding-left: 24px;
+				font-size: 16px;
+				color: #1d1d1d;
+				@media #{$lg} {
+					width: 240px;
+				}
+				@media #{$xs} {
+					width: 100%;
+				}
+				@media #{$sm} {
+					width: 50%;
+				}
+				&::placeholder{
+					color: #1d1d1d;
+					opacity: .4;
+				}
+			}
+			& button{
+				margin-left: 20px;
+				background: $theme-color-2;
+				border-color: $theme-color-2;
+				& i{
+					padding-left: 6px;
+				}
+				@media #{$xs} {
+					margin-left: 0;
+					margin-top: 20px;
+				}
+				@media #{$sm} {
+					margin-left: 20px;
+					margin-top: 0px;
+				}
+				&:hover{
+					background: $heading-color;
+					color: $white;
+				}
+			}
+		}
+		
+	}
+	& .performance-thumb{
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 50%;
+		@media #{$laptop} {
+			width: 47%;
+		}
+		@media #{$md} {
+			position: static;
+			transform: translateY(0);
+			width: 100%;
+		}
+		@media #{$xs} {
+			position: static;
+			transform: translateY(0);
+			width: 100%;
+		}
+	}
+	& .performance-shape{
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 50%;
+		@media #{$laptop} {
+			width: 47%;
+		}
+		@media #{$md} {
+			display: none;
+		}
+		@media #{$xs} {
+			display: none;
+		}
+	}
+	&.augmentation-5-area{
+		padding-top: 330px;
+		padding-bottom: 328px;
+		@media #{$laptop} {
+			padding-top: 200px;
+			padding-bottom: 100px;
+		}
+		@media #{$lg} {
+			padding-top: 0px;
+			padding-bottom: 0px;
+		}
+		@media #{$md} {
+			padding-top: 0px;
+			padding-bottom: 0px;
+		}
+		@media #{$xs} {
+			padding-top: 0px;
+			padding-bottom: 0px;
+		}
+		& .performance-content{
+			& a{
+				margin-top: 30px;
+				border: solid 2px rgba(102, 102, 102, 0.12);
+				color: rgba(29,29,29,.4);
+				background-color: transparent;
+				&:hover{
+					border-color: $theme-color-2;
+					background: $theme-color-2;
+					color: $white;
+				}
+
+			}
+		}
+	}
+	&.augmentation-people{
+		padding-top: 330px;
+		padding-bottom: 328px;
+		margin-top: 154px;
+		@media #{$laptop} {
+			padding-top: 100px;
+			padding-bottom: 200px;
+		}
+		@media #{$lg} {
+			padding-top: 0px;
+			padding-bottom: 0px;
+		}
+		@media #{$md} {
+			padding-top: 0px;
+			padding-bottom: 0px;
+			margin-top: 0;
+		}
+		@media #{$xs} {
+			padding-top: 0px;
+			padding-bottom: 0px;
+			margin-top: 0;
+		}
+		& .performance-content{
+			& a{
+				margin-top: 30px;
+				border: 2px solid rgba(102, 102, 102, 0.12);
+				background-color: transparent;
+				color: rgba(29,29,29,.4);
+
+				&:hover{
+					border: solid 2px $theme-color-2;
+					background-color: $theme-color-2;
+					color: $white;
+				}
+
+			}
+		}
+		& .performance-shape{
+			left: 0;
+			right: auto;
+		}
+		& .performance-thumb{
+			left: 0;
+			right: auto;
+		}
+	}
+
+}

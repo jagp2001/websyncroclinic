@@ -1,0 +1,67 @@
+
+
+/*===========================
+    22.FEATURES css 
+===========================*/
+
+
+
+
+
+.features-area{
+	padding-top: 113px;
+	padding-bottom: 120px;
+	& .features-thumb{
+		margin-left: -45px;
+		margin-right: -30px;
+		@media #{$md} {
+			margin-left: 0;
+			margin-right: 0;
+		}
+		@media #{$xs} {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+}
+
+
+.features-content{
+	@media #{$xs} {
+		margin-top: 50px;
+	}
+	& span{
+		color: $theme-color-3;
+		font-size: 24px;
+		text-transform: uppercase;
+		font-family: $rubik;
+	}
+	&  >.title{
+		font-size: 46px;
+		line-height: 62px;
+		font-weight: 400;
+		padding-top: 13px;
+		padding-bottom: 31px;
+		@media #{$xs} {
+			font-size: 30px;
+		}
+		@media #{$sm} {
+			font-size: 46px;
+		}
+	}
+	& .features-item{
+		& .title{
+			font-size: 26px;
+			line-height: 36px;
+			font-weight: 500;
+			padding-top: 25px;
+			padding-bottom: 5px;
+			@media #{$lg} {
+				font-size: 22px;
+			}
+			@media #{$xs} {
+				font-size: 22px;
+			}
+		}
+	}
+}

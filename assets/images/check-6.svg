@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="18px" viewBox="0 0 24 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>check_hide</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.3">
+        <g id="06_Software" transform="translate(-423.000000, -7589.000000)" fill="#FF8618" fill-rule="nonzero">
+            <g id="Pricing" transform="translate(390.000000, 6928.000000)">
+                <g id="1" transform="translate(0.000000, 261.000000)">
+                    <g id="Item" transform="translate(33.000000, 312.000000)">
+                        <g id="check_hide" transform="translate(0.000000, 88.000000)">
+                            <path d="M8.15146499,17.3907345 L0.351457374,9.65957296 C-0.117152458,9.19509927 -0.117152458,8.44200794 0.351457374,7.97748779 L2.04847466,6.29540262 C2.51708449,5.83088246 3.27692898,5.83088246 3.74553881,6.29540262 L9,11.5034364 L20.2544612,0.348355268 C20.723071,-0.116118423 21.4829155,-0.116118423 21.9515253,0.348355268 L23.6485426,2.03044044 C24.1171525,2.49491413 24.1171525,3.24800546 23.6485426,3.71252561 L9.84852915,17.390781 C9.37987244,17.8552547 8.62007482,17.8552547 8.15146499,17.3907345 L8.15146499,17.3907345 Z" id="Path"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

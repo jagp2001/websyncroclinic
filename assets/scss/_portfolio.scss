@@ -1,0 +1,180 @@
+
+
+/*===========================
+    28.PORTFOLIO css 
+===========================*/
+
+
+
+
+.portfolio-v1-area{
+	& .portfolio-btn{
+		padding-bottom: 30px;
+		& .nav{
+			justify-content: center;
+			box-shadow: 5px 5px 124px 10px rgba(255, 79, 79, 0.1);
+			background: $white;
+			& li{
+				& a{
+					padding: 0;
+					margin: 0 27px;
+					background-color: transparent;
+					color: $text-color;
+					line-height: 76px;
+					@media #{$md} {
+						font-size: 14px;
+						margin: 0 14px;
+					}
+					&.active{
+						color: $theme-color;
+
+					}
+				}
+			}
+		}
+	}
+	& .portfolio-more{
+		& a{
+			border: solid 2px rgba(102, 102, 102, 0.12);
+			line-height: 60px;
+			width: 185px;
+			background-color: transparent;
+			color: $heading-color;
+			&:hover{
+				background: $theme-color;
+				border-color: $theme-color;
+				color: $white;
+			}
+		}
+	}
+	&.portfolio-v2-area{
+		& .portfolio-btn{
+			& .nav{
+				box-shadow: none;
+				background: rgba(246, 89, 84, 0.08);
+			}
+		}
+
+	}
+}
+
+.portfolio-item-v1{
+	overflow: hidden;
+	border-radius: 10px;
+	position: relative;
+	& > img{
+		width: 100%;
+	}
+	& .portfolio-overlay{
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background: rgba(255,79,79,.92);
+		z-index: 10;
+		opacity: 0;
+		@include transition(0.3s);
+		& .content{
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 1;
+			& span{
+				color: $white;
+				font-size: 20px;
+				font-weight: 500;
+				font-family: $rubik;
+			}
+			& .title{
+				font-size: 28px;
+				font-weight: 500;
+				color: $white;
+				padding-top: 10px;
+			}
+			& p{
+				color: $white;
+			}
+		}
+		& .shape{
+			position: absolute;
+			right: -80px;
+			bottom: 0;
+			z-index: -1;
+            @include transition(0.5s);
+		}
+	}
+	&:hover{
+		& .portfolio-overlay{
+			opacity: 1;
+		}
+        & .shape{
+            right: 0;
+        }
+	}
+	&.portfolio-item-v2{
+		margin-bottom: 40px;
+		overflow: visible;
+		& .portfolio-overlay{
+			border-radius: 10px;
+			overflow: hidden;
+			z-index: 1;
+			& .content{
+				background: $white;
+				bottom: -40px;
+				top: auto;
+				padding: 0 55px;
+				transform: translate(-50%, 0%);
+				padding-bottom: 13px;
+				padding-top: 2px;
+				border-radius: 5px;
+				& .title{
+					color: $heading-color;
+				}
+				& p{
+					color: $heading-color;
+				}
+			}
+		}
+		& .content{
+			background: $white;
+			position: absolute;
+			bottom: -40px;
+			left: 50%;
+			width: 270px;
+			transform: translate(-50%, 0%);
+			padding-bottom: 13px;
+			padding-top: 12px;
+			border-radius: 5px;
+			box-shadow: 5px 5px 24px 10px rgba(255, 79, 79, 0.1);
+			z-index: 2;
+			@include transition(0.3s);
+			color: $heading-color;
+			& .title{
+				color: $heading-color;
+				font-size: 28px;
+				font-weight: 500;
+				@include transition(0.3s);
+				margin: 0;
+			}
+			& p{
+				@include transition(0.3s);
+				margin: 0;
+			}
+		}
+		&:hover{
+			& .content{
+				bottom: 85px;
+				box-shadow: none;
+				background: rgba(255, 255, 255, 0.15);
+				& .title{
+					color: $white;
+				}
+				& p{
+					color: $white;
+				}
+			}
+		}
+	}
+}

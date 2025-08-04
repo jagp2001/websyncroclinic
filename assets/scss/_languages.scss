@@ -1,0 +1,112 @@
+
+
+/*===========================
+    24.LANGUAGES css 
+===========================*/
+
+
+
+
+
+.languages-area{
+	position: relative;
+	padding-top: 108px;
+	padding-bottom: 120px;
+	& .languages-bg{
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background: rgba(255,134,24,.06);
+		&::before{
+			position: absolute;
+			content: '';
+			left: 50%;
+			top: 0;
+			transform: translateX(-50%);
+			height: 100%;
+			width: 90%;
+			background-image: url(../images/languages-map.png);
+			background-size: 100% 100%;
+			background-position: center;
+			background-repeat: no-repeat;
+			@media #{$laptop} {
+				background-size: cover;
+				width: 100%;
+			}
+			@media #{$lg} {
+				background-size: cover;
+				width: 100%;
+			}
+			@media #{$md} {
+				background-size: cover;
+				width: 100%;
+			}
+			@media #{$xs} {
+				background-size: cover;
+				width: 100%;
+			}
+		}
+	}
+	& .brand-2-active{
+	    & .brand-item{
+	        height: 103px;
+	        width: 100%;
+	        display: flex;
+	        align-items: center;
+	        justify-content: center;
+	        margin-top: 30px;
+	        @include transition(0.3s);
+	        &:hover{
+	            background: $white;
+	        }
+	        & img{
+	            display: inline-block;
+	            cursor: pointer;
+	        }
+	    }
+	    &.brand-6-active{
+	    	& .brand-item{
+	    		background-color: transparent;
+	    		& img{
+	    			opacity: .5;
+	    			@include transition(0.3s);
+	    		}
+	    		&:hover{
+	    			& img{
+	    				opacity: 1;
+	    			}
+	    		}
+	    	}
+	    }
+
+	}
+	&.about-languages-area{
+		& .languages-bg{
+			background-color: transparent;
+		}
+	}
+}
+
+.languages-title{
+	text-align: center;
+	& .title{
+		font-size: 46px;
+		line-height: 60px;
+		font-weight: 400;
+		padding: 0 10px;
+		@media #{$xs} {
+			font-size: 28px;
+			line-height: 38px;
+		}
+		@media #{$sm} {
+			font-size: 32px;
+			line-height: 42px;
+		}
+		& span{
+			display: inline;
+			font-weight: 700;
+		}
+	}
+}
