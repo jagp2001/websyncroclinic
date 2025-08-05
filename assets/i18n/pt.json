@@ -1,0 +1,62 @@
+{
+  "nav": {
+    "home": "Início",
+    "home1": "Home 1",
+    "home2": "Home 2",
+    "home3": "Home 3",
+    "home4": "Home 4",
+    "home5": "Home 5",
+    "home6": "Home 6",
+    "home7": "Home 7",
+    "about": "Sobre",
+    "blog": "Blog",
+    "blogGrid": "Grade do Blog",
+    "blogList": "Lista do Blog",
+    "blogList1": "Lista do Blog 1",
+    "blogList2": "Lista do Blog 2",
+    "blogPost": "Post do Blog",
+    "blogPost1": "Post do Blog 1",
+    "blogPost2": "Post do Blog 2",
+    "page": "Página",
+    "service": "Serviço",
+    "portfolio": "Portfólio",
+    "portfolio1": "Portfólio 1",
+    "portfolio2": "Portfólio 2",
+    "team": "Equipe",
+    "team1": "Equipe 1",
+    "team2": "Equipe 2",
+    "login": "Entrar",
+    "signup": "Registrar-se",
+    "error": "Erro 404",
+    "contact": "Contato"
+  },
+  "header": {
+    "cta": "Comece Grátis"
+  },
+  "banner": {
+    "title": "Tornando-se <span>Um Especialista em Reparo de DVD</span> Online",
+    "text": "Encontrar a ferramenta de aprendizado perfeita para Flash é uma tarefa assustadora para qualquer desenvolvedor web iniciante. Pode-se encontrar ajuda de várias maneiras por meio de livros, amigos e tutores particulares",
+    "getStarted": "Começar",
+    "watchVideo": "Assistir vídeo"
+  },
+  "subscribe": {
+    "title": "Conectando-se conosco e <br> recebendo atualizações.",
+    "cta": "Inscreva-se Agora"
+  },
+  "footer": {
+    "about": "A beleza da astronomia é que qualquer pessoa pode praticá-la. Do menor bebê ao astrofísico mais avançado, há algo para todos que querem apreciar a astronomia.",
+    "featuresTitle": "Recursos",
+    "feature1": "Design de Sites",
+    "feature2": "Marketing em Mídias Sociais",
+    "feature3": "Análise de SEO",
+    "feature4": "Marketing Digital",
+    "pagesTitle": "Páginas",
+    "page1": "Início",
+    "page2": "Nossos Serviços",
+    "page3": "Sobre Nós",
+    "page4": "Perguntas Frequentes",
+    "contactTitle": "Contate-nos",
+    "address": "00 Orville Road Apt. 728 California, USA",
+    "copyright": "Copyright 2026 @<span>Syncroclinic</span> Todos os Direitos Reservados"
+  }
+}
