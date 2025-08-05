@@ -39,6 +39,22 @@
     "getStarted": "Get Started",
     "watchVideo": "Watch video"
   },
+  "services": {
+    "sectionLabel": "Services We Offer",
+    "sectionHeading": "<span>Get Best</span> Advertiser <span>In Your Side Pocket</span>",
+    "item1": {
+      "title": "Friendly dashboard & Cool Interface.",
+      "text": "Finding the perfect learning tool for Flash is a daunting task to any novice web developer."
+    },
+    "item2": {
+      "title": "Download Free Song For Ipod",
+      "text": "Finding the perfect learning tool for Flash is a daunting task to any novice web developer."
+    },
+    "item3": {
+      "title": "Are You Famous Or Focused",
+      "text": "Finding the perfect learning tool for Flash is a daunting task to any novice web developer."
+    }
+  },
   "subscribe": {
     "title": "Getting connected with us & <br> for the update.",
     "cta": "Subscribe Now"

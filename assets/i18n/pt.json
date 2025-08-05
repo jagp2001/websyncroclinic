@@ -39,6 +39,22 @@
     "getStarted": "Começar",
     "watchVideo": "Assistir vídeo"
   },
+  "services": {
+    "sectionLabel": "Serviços que oferecemos",
+    "sectionHeading": "<span>Consiga o melhor</span> anunciante <span>no seu bolso</span>",
+    "item1": {
+      "title": "Painel amigável e interface legal",
+      "text": "Encontrar a ferramenta de aprendizado perfeita para Flash é uma tarefa assustadora para qualquer desenvolvedor web iniciante."
+    },
+    "item2": {
+      "title": "Baixe música grátis para iPod",
+      "text": "Encontrar a ferramenta de aprendizado perfeita para Flash é uma tarefa assustadora para qualquer desenvolvedor web iniciante."
+    },
+    "item3": {
+      "title": "Você é famoso ou focado?",
+      "text": "Encontrar a ferramenta de aprendizado perfeita para Flash é uma tarefa assustadora para qualquer desenvolvedor web iniciante."
+    }
+  },
   "subscribe": {
     "title": "Conectando-se conosco e <br> recebendo atualizações.",
     "cta": "Inscreva-se Agora"
