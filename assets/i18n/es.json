@@ -39,6 +39,22 @@
     "getStarted": "Get Started",
     "watchVideo": "Watch video"
   },
+  "services": {
+    "sectionLabel": "Servicios que ofrecemos",
+    "sectionHeading": "<span>Consigue el mejor</span> anunciante <span>en tu bolsillo</span>",
+    "item1": {
+      "title": "Tablero amigable e interfaz genial",
+      "text": "Encontrar la herramienta de aprendizaje perfecta para Flash es una tarea ardua para cualquier desarrollador web principiante."
+    },
+    "item2": {
+      "title": "Descarga canciones gratis para iPod",
+      "text": "Encontrar la herramienta de aprendizaje perfecta para Flash es una tarea ardua para cualquier desarrollador web principiante."
+    },
+    "item3": {
+      "title": "¿Eres famoso o enfocado?",
+      "text": "Encontrar la herramienta de aprendizaje perfecta para Flash es una tarea ardua para cualquier desarrollador web principiante."
+    }
+  },
   "subscribe": {
     "title": "Getting connected with us & <br> for the update.",
     "cta": "Subscribe Now"
