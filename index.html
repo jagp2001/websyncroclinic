@@ -11,6 +11,13 @@
 <title>Software médico en la nube | Historia clínica electrónica para clínicas | SyncroClinic</title>
 <meta name="description" content="Software médico en la nube para clínicas y consultorios. Historia clínica electrónica, agenda médica online, recetas y facturación. Prueba gratis 15 días.">
 
+<!-- Preconnect (no bloquea; acelera cuando POR FIN se carguen) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- (opcional) quita este: <link rel="preconnect" href="https://syncroclinic.com" crossorigin> -->
+<!-- ❌ elimina el <link rel="preload" ...> y el <noscript> de Google Fonts -->
+
+
 
   <!-- Canonical + Hreflang (tienes versiones EN/PT en tu nav) -->
   <link rel="canonical" href="https://syncroclinic.com/">
@@ -26,27 +33,178 @@
 <meta property="og:title" content="Software médico en la nube | Historia clínica electrónica para clínicas | SyncroClinic">
   <meta property="og:description" content="Historia clínica electrónica, agenda, recetas, recordatorios por WhatsApp y facturación. Prueba gratis 15 días.">
   <meta property="og:url" content="https://syncroclinic.com/">
-  <meta property="og:image" content="https://syncroclinic.com/assets/images/banner-thumb-1.png">
+  <meta property="og:image" content="https://syncroclinic.com/assets/images/banner-thumb-1.webp">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Software médico en la nube | Historia clínica electrónica para clínicas | SyncroClinic">
   <meta name="twitter:description" content="Historia clínica electrónica, agenda, recetas y recordatorios por WhatsApp. Prueba gratis 15 días.">
-  <meta name="twitter:image" content="https://syncroclinic.com/assets/images/banner-thumb-1.png">
+  <meta name="twitter:image" content="https://syncroclinic.com/assets/images/banner-thumb-1.webp">
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/png">
 
   <!-- CSS (tuyos existentes) -->
-  <link rel="stylesheet" href="https://cdn.lineicons.com/3.0/lineicons.css">
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-  <link rel="stylesheet" href="assets/css/magnific-popup.css">
-  <link rel="stylesheet" href="assets/css/slick.css">
-  <link rel="stylesheet" href="assets/css/animate.min.css">
-  <link rel="stylesheet" href="assets/css/custom-animation.css">
-  <link rel="stylesheet" href="assets/css/default.css">
-  <link rel="stylesheet" href="assets/css/style.css">
+<!-- === Critical CSS mínimo === -->
+<!-- === Critical CSS optimizado === -->
+<style>
+  :root{
+    --brand:#0b66ff;
+
+    /* Estado TOP (sobre área azul) */
+/* ===== Estado TOP (sobre área azul) ===== */
+header{
+  /* variables cuando el header está arriba, sobre el área azul */
+  --nav-bg:transparent;
+  --nav-fg:#fff;
+  --nav-fg-hover:#e9f0ff;
+  --btn-primary-fg:#fff;
+}
+
+/* Header y navegación usan las variables anteriores */
+header{position:sticky;top:0;z-index:1000;background:var(--nav-bg);transition:background .25s ease, box-shadow .25s ease}
+.header-nav{background:transparent}
+.navigation .navbar{display:flex;align-items:center;gap:16px;min-height:64px;padding:8px 16px}
+
+/* Colores de enlaces/íconos arriba (transparente) */
+.navigation .navbar a.nav-link,
+.navigation .navbar .navbar-brand,
+.navigation .navbar .navbar-brand-1,
+.navigation .navbar .navbar-brand-2 { color:var(--nav-fg); }
+.navigation .navbar a.nav-link:hover{ color:var(--nav-fg-hover); }
+
+/* Selector de idioma en blanco arriba */
+.navigation .lang-link,
+.navigation .lni.lni-world { color:var(--nav-fg) !important; }
+
+/* Botón “Empieza Gratis” */
+.navbar-btn .main-btn{ color:var(--btn-primary-fg) }
+
+/* Swap de logos */
+.navbar-brand-1,.navbar-brand-2{display:inline-block;vertical-align:middle}
+.navbar-brand-2{display:none}
+.navbar-brand-1 img,.navbar-brand-2 img{max-height:40px;width:auto}
+
+/* ===== Estado SCROLLED (fondo blanco, textos oscuros) ===== */
+header.header-scrolled{
+  --nav-bg:#fff;
+  --nav-fg:#111;
+  --nav-fg-hover:#0b66ff;
+  box-shadow:0 6px 16px rgba(0,0,0,.06); /* ojo al .06 */
+}
+header.header-scrolled .navbar-brand-1{display:none!important}
+header.header-scrolled .navbar-brand-2{display:inline-block!important}
+
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:#111;background:#fff}
+
+  /* ====== Header ====== */
+  header{position:sticky;top:0;z-index:1000;background:var(--nav-bg);transition:background .25s ease, box-shadow .25s ease}
+  .header-nav{background:transparent}
+  .navigation .navbar{display:flex;align-items:center;gap:16px;min-height:64px;padding:8px 16px}
+
+  /* Colores de enlaces/íconos arriba (transparente) */
+  .navigation .navbar a.nav-link,
+  .navigation .navbar .navbar-brand,
+  .navigation .navbar .navbar-brand-1,
+  .navigation .navbar .navbar-brand-2 { color:var(--nav-fg); }
+  .navigation .navbar a.nav-link:hover{ color:var(--nav-fg-hover); }
+
+  /* Selector de idioma (tiene estilos inline en el HTML; los sobreescribimos) */
+  .navigation .lang-link,
+  .navigation .lni.lni-world { color:var(--nav-fg) !important; }
+
+  /* Botón “Empieza Gratis” visible en ambos estados */
+  .navbar-btn .main-btn{ color:var(--btn-primary-fg) }
+
+  /* Intercambio de logos */
+  .navbar-brand-1, .navbar-brand-2 { display:inline-block; vertical-align:middle }
+  .navbar-brand-2 { display:none }
+  .navbar-brand-1 img, .navbar-brand-2 img { max-height:40px; width:auto }
+
+  /* ====== Estado SCROLLED (fondo blanco, textos oscuros) ====== */
+  header.header-scrolled{
+    --nav-bg:#fff;
+    --nav-fg:#111;
+    --nav-fg-hover:#0b66ff;
+    box-shadow:0 6px 16px rgba(0,0,0,.06);
+  }
+  header.header-scrolled .navbar-brand-1{ display:none !important; }
+  header.header-scrolled .navbar-brand-2{ display:inline-block !important; }
+
+  /* Héroe y botones (como lo tenías) */
+  .hero{display:grid;align-items:center;min-height:60vh;padding:24px}
+  .hero h1{font-size:clamp(28px,4vw,48px);line-height:1.1;margin:0 0 12px}
+  .btn{display:inline-block;padding:12px 18px;border-radius:10px;text-decoration:none}
+  .btn-primary{background:var(--brand);color:#fff;font-weight:600}
+</style>
+
+
+
+<!-- === style.css como HOJA NORMAL (evita FOUC) === -->
+<link rel="preload" href="/assets/css/style.css?v=3" as="style">
+<link rel="stylesheet" href="/assets/css/style.css?v=3">
+
+<!-- === resto NO bloqueante === -->
+<link rel="preload" href="/assets/css/bootstrap.min.css?v=3" as="style">
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css?v=3" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="/assets/css/bootstrap.min.css?v=3"></noscript>
+
+<link rel="preload" href="/assets/css/default.css?v=3" as="style">
+<link rel="stylesheet" href="/assets/css/default.css?v=3" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="/assets/css/default.css?v=3"></noscript>
+
+<script>
+  function loadCSS(href){var l=document.createElement('link');l.rel='stylesheet';l.href=href;document.head.appendChild(l);}
+  window.addEventListener('load', function(){
+    loadCSS('/assets/css/font-awesome.min.css?v=3');
+    loadCSS('/assets/css/animate.min.css?v=3');
+    loadCSS('/assets/css/slick.css?v=3');
+    loadCSS('/assets/css/magnific-popup.css?v=3');
+    loadCSS('/assets/css/custom-animation.css?v=3');
+  });
+</script>
+
+<!-- === script para cambio de fondo del header === -->
+<script>
+(function(){
+  var header   = document.querySelector('header');
+  var brand1   = document.querySelector('.navbar-brand-1');
+  var brand2   = document.querySelector('.navbar-brand-2');
+  var img2     = document.getElementById('logoScrolled');
+  var loaded2  = false;
+
+  function loadScrolledLogo(){
+    if(loaded2 || !img2) return;
+    var src = img2.getAttribute('data-src');
+    if(src){ img2.src = src; loaded2 = true; }
+  }
+
+  function onScroll(){
+    if(window.scrollY > 10){
+      header.classList.add('header-scrolled');
+      if(brand1) brand1.style.display='none';
+      if(brand2) brand2.style.display='';
+      loadScrolledLogo();
+      setTimeout(loadScrolledLogo,0);
+    }else{
+      header.classList.remove('header-scrolled');
+      if(brand1) brand1.style.display='';
+      if(brand2) brand2.style.display='none';
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+</script>
+
+
+
+
+
 
   <!-- Schema.org (SoftwareApplication + Organización) -->
 <script type="application/ld+json">
@@ -58,7 +216,7 @@
   "operatingSystem": "Web",
   "url": "https://syncroclinic.com/",
   "description": "Software médico en la nube para clínicas y consultorios: historia clínica electrónica, agenda médica online, recetas y facturación.",
-  "image": "https://syncroclinic.com/assets/images/banner-thumb-1.png",
+  "image": "https://syncroclinic.com/assets/images/banner-thumb-1.webp",
   "publisher": {
     "@type": "Organization",
     "name": "Vozocial S.A.",
@@ -131,15 +289,7 @@
 }
 </script>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BJMR8PYFXG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-BJMR8PYFXG');
-</script>
 
 </head>
 
@@ -147,7 +297,7 @@
 <body>
 
     <!--====== PRELOADER PART START ======-->
-
+<!--
     <div class="preloader" id="preloader">
         <div class="three ">
             <div class="loader" id="loader">
@@ -157,6 +307,8 @@
             </div>
         </div>
     </div>
+    
+    -->
 
     <!--====== PRELOADER PART START ======-->
 
@@ -181,8 +333,30 @@
 
 
                             <nav class="navbar navbar-expand-lg navbar-light ">
-                                <a class="navbar-brand" href="index.html"><img src="assets/images/logo-1.png" alt="" style="width: 200px;"></a> <!-- logo -->
-                                <a class="navbar-brand-2" href="index.html"><img src="assets/images/logo-2.png" alt="" style="width: 200px;"></a> <!-- logo -->
+                              
+                              <!-- Logo visible en TOP (transparente) -->
+<!-- Logo para TOP (fondo azul): BLANCO -->
+<a class="navbar-brand navbar-brand-1" href="/">
+  <img src="/assets/images/logo-1.webp" alt="SyncroClinic"
+       width="200" height="40" decoding="async" fetchpriority="high">
+</a>
+
+<!-- Logo SCROLLED (oscuro) -->
+<a class="navbar-brand navbar-brand-2" href="/" style="display:none">
+  <img src="/assets/images/logo-2.webp"
+       alt="SyncroClinic"
+       width="200" height="40"
+       decoding="async"
+       fetchpriority="low">
+</a>
+
+
+
+
+                              
+                              
+                              
+                              
                                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                     <span class="toggler-icon"></span>
                                     <span class="toggler-icon"></span>
@@ -237,7 +411,9 @@
             <div class="row">
                 <div class="col-lg-7">
                     <div class="banner-content">
-<h1 class="title">Software médico en la nube para clínicas y consultorios</h1>
+<h1 class="title" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.6);">
+  Software médico en la nube para clínicas y consultorios
+</h1>
 
 <p class="text tagline-mobile" style="font-style: italic; font-size: 20px; padding-bottom: 30px !important; margin-top: -30px !important;">
   Tus clientes <strong style="color: #FFD700;">no olvidan</strong> cuando tú los recuerdas, clientes felices, negocios que crecen.
@@ -264,12 +440,19 @@
 
 
                        
-                      <ul>
-                            <li><a class="main-btn" href="https://app.syncroclinic.com/register-clinic">Demo Gratis</a></li>
-                            <li><a class="play video-popup" href="https://www.youtube.com/watch?v=_Hp_dI0DzY4">
-                                <div class="play-btn"><img src="assets/images/play.svg" alt=""></div> Ver video
-                            </a></li>
-                        </ul>
+            <ul>
+  <li><a class="main-btn" href="https://app.syncroclinic.com/register-clinic">Demo Gratis</a></li>
+  <li>
+    <a class="play video-popup" href="https://player.vimeo.com/video/1135548880?autoplay=1&muted=0">
+      <div class="play-btn">
+        <img src="assets/images/play.svg" alt="">
+      </div>
+      Ver video
+    </a>
+  </li>
+</ul>
+
+
                     </div> <!-- banner content -->
                 </div>
             </div> <!-- row -->
@@ -279,11 +462,11 @@
                 <img src="assets/images/banner-shape.svg" alt="">
             </div>
             <div class="banner-thumb animated wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="300ms">
-<img src="assets/images/banner-thumb-1.png" alt="software médico en la nube - pantalla principal">
+<img src="assets/images/banner-thumb-1.webp" alt="software médico en la nube - pantalla principal">
 
             </div>
             <div class="banner-thumb-2 animated wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="350ms">
-<img src="assets/images/banner-thumb-2.png" alt="software médico en la nube - vista móvil del app">
+<img src="assets/images/banner-thumb-2.webp" alt="software médico en la nube - vista móvil del app">
 
             </div>
         </div>
@@ -399,18 +582,18 @@
     <div class="row align-items-center">
         <div class="col-lg-5">
             <div class="advertiser-thumb animated wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="100ms">
-                <img src="assets/images/advertiser-thumb-5.png" alt="">
+                <img src="assets/images/advertiser-thumb-5.webp" alt="">
                 <div class="thumb">
-                    <img src="assets/images/advertiser-bar-1.png" alt="advertiser">
+                    <img src="assets/images/advertiser-bar-1.webp" alt="advertiser">
                 </div>
                 <div class="advertiser-bg-shape">
-                    <img src="assets/images/advertiser-shape-4.png" alt="">
+                    <img src="assets/images/advertiser-shape-4.webp" alt="">
                     <div class="round-shape"></div>
                     <div class="advertiser-shape-1">
-                        <img src="assets/images/advertiser-shape-1.png" alt="">
+                        <img src="assets/images/advertiser-shape-1.webp" alt="">
                     </div>
                     <div class="advertiser-shape-2">
-                        <img src="assets/images/advertiser-shape-2.png" alt="">
+                        <img src="assets/images/advertiser-shape-2.webp" alt="">
                     </div>
                 </div>
             </div> <!-- advertiser thumb -->
@@ -439,18 +622,18 @@
             <div class="row align-items-center">
                 <div class="col-lg-5">
                     <div class="advertiser-thumb animated wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="100ms">
-                        <img src="assets/images/advertiser-thumb-1.png" alt="">
+                        <img src="assets/images/advertiser-thumb-1.webp" alt="">
                         <div class="thumb">
-                            <img src="assets/images/advertiser-bar-1.png" alt="advertiser">
+                            <img src="assets/images/advertiser-bar-1.webp" alt="advertiser">
                         </div>
                         <div class="advertiser-bg-shape">
-                            <img src="assets/images/advertiser-shape-4.png" alt="">
+                            <img src="assets/images/advertiser-shape-4.webp" alt="">
                             <div class="round-shape"></div>
                             <div class="advertiser-shape-1">
-                                <img src="assets/images/advertiser-shape-1.png" alt="">
+                                <img src="assets/images/advertiser-shape-1.webp" alt="">
                             </div>
                             <div class="advertiser-shape-2">
-                                <img src="assets/images/advertiser-shape-2.png" alt="">
+                                <img src="assets/images/advertiser-shape-2.webp" alt="">
                             </div>
                         </div>
                     </div> <!-- advertiser thumb -->
@@ -489,15 +672,15 @@
                 </div>
                 <div class="col-lg-5">
                     <div class="advertiser-thumb text-right animated wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="100ms">
-                        <img src="assets/images/advertiser-thumb-2.png" alt="">
+                        <img src="assets/images/advertiser-thumb-2.webp" alt="">
                         <div class="advertiser-bg-shape">
-                            <img src="assets/images/advertiser-shape-4.png" alt="">
+                            <img src="assets/images/advertiser-shape-4.webp" alt="">
                             <div class="round-shape"></div>
                             <div class="advertiser-shape-1">
-                                <img src="assets/images/advertiser-shape-1.png" alt="">
+                                <img src="assets/images/advertiser-shape-1.webp" alt="">
                             </div>
                             <div class="advertiser-shape-2">
-                                <img src="assets/images/advertiser-shape-2.png" alt="">
+                                <img src="assets/images/advertiser-shape-2.webp" alt="">
                             </div>
                         </div>
                     </div>
@@ -510,12 +693,12 @@
             <div class="row align-items-center">
                 <div class="col-lg-5">
                     <div class="advertiser-thumb animated wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="100ms">
-                        <img src="assets/images/advertiser-thumb-3.png" alt="">
+                        <img src="assets/images/advertiser-thumb-3.webp" alt="">
                         <div class="advertiser-bg-shape">
-                            <img src="assets/images/advertiser-shape-4.png" alt="">
+                            <img src="assets/images/advertiser-shape-4.webp" alt="">
                             <div class="round-shape"></div>
                             <div class="advertiser-shape-2">
-                                <img src="assets/images/advertiser-shape-2.png" alt="">
+                                <img src="assets/images/advertiser-shape-2.webp" alt="">
                             </div>
                         </div>
                     </div>
@@ -680,10 +863,10 @@
         </div>
         <div class="what-we-do-bg">
             <div class="what-we-do-overlay-1">
-                <img src="assets/images/what-we-do-overlay-3.png" alt="Interfaz de SyncroClinic HCE">
+                <img src="assets/images/what-we-do-overlay-3.webp" alt="Interfaz de SyncroClinic HCE">
             </div>
             <div class="what-we-do-overlay-2">
-                <img src="assets/images/what-we-do-overlay-4.png" alt="Adjuntar exámenes por QR">
+                <img src="assets/images/what-we-do-overlay-4.webp" alt="Adjuntar exámenes por QR">
             </div>
         </div>
     </section>
@@ -761,7 +944,7 @@ Su uso y aplicación me ahorra tiempo espacio y me brinda seguridad y seguimient
     <section class="fun-facts-area fun-facts-2-area">
         <div class="container">
             <div class="fun-facts-line">
-                <img src="assets/images/fun-facts-line-2.png" alt="">
+                <img src="assets/images/fun-facts-line-2.webp" alt="">
                 <div class="row">
                     <div class="col-lg-3 col-md-6">
                         <div class="fun-facts-item fun-facts-2-item text-center mt-50 animated wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="0ms">
@@ -804,10 +987,10 @@ Su uso y aplicación me ahorra tiempo espacio y me brinda seguridad y seguimient
         </div>
         <div class="fun-facts-shaps">
             <div class="fun-facts-shape-1">
-                <img src="assets/images/what-we-do-overlay-4.png" alt="">
+                <img src="assets/images/what-we-do-overlay-4.webp" alt="">
             </div>
             <div class="fun-facts-shape-2">
-                <img src="assets/images/what-we-do-overlay-5.png" alt="">
+                <img src="assets/images/what-we-do-overlay-5.webp" alt="">
             </div>
         </div>
     </section>
@@ -834,7 +1017,7 @@ Su uso y aplicación me ahorra tiempo espacio y me brinda seguridad y seguimient
       <div class="col-lg-4 col-md-6 col-sm-9">
         <div class="pricing-item pricing-2-item text-center mt-80">
           <h3 class="title">Essential</h3>
-          <h1>$10</h1>
+<p class="price-display">$20</p>
           <span>/usuario/mes</span>
           <ul>
             <li>Funciones básicas para comenzar</li>
@@ -850,7 +1033,7 @@ Su uso y aplicación me ahorra tiempo espacio y me brinda seguridad y seguimient
         <div class="pricing-item pricing-2-item text-center mt-30 center">
           <b>Recomendado</b>
           <h3 class="title">Entrepreneur</h3>
-          <h1>$15</h1>
+<p class="price-display">$25</p>
           <span>/usuario/mes</span>
           <ul>
             <li>Todo lo incluido en Essential</li>
@@ -865,7 +1048,7 @@ Su uso y aplicación me ahorra tiempo espacio y me brinda seguridad y seguimient
       <div class="col-lg-4 col-md-6 col-sm-9">
         <div class="pricing-item pricing-2-item text-center mt-80">
           <h3 class="title">Professional</h3>
-          <h1>$20</h1>
+<p class="price-display">$35</p>
           <span>/usuario/mes</span>
           <ul>
             <li>Todo lo incluido en Entrepreneur</li>
@@ -958,7 +1141,17 @@ Su uso y aplicación me ahorra tiempo espacio y me brinda seguridad y seguimient
 </section>
 
 <!-- Estilos para colores, bordes y sombra -->
+
 <style>
+.price-display {
+  font-size: 48px;     /* igual tamaño que el h1 */
+  font-weight: 700;    /* grosor del texto */
+  line-height: 1.2;
+  color: #000;         /* o el color actual de tus títulos */
+  margin: 10px 0;
+  font-family: 'Poppins', sans-serif; /* o la fuente usada por tus h1 */
+}
+
   .text-success {
     color: #28a745 !important;
     font-weight: bold;
@@ -1008,41 +1201,7 @@ Su uso y aplicación me ahorra tiempo espacio y me brinda seguridad y seguimient
 
     <!--====== PRICING PART ENDS ======-->
 
-    <!--====== BRAND PART START ======-->
-
-    <div class="brand-area">
-        <div class="container">
-            <div class="row brand-active">
-                <div class="col-lg-3">
-                    <div class="brand-item text-center">
-                        <a href="#"><img src="assets/images/brand-2.png" alt=""></a>
-                    </div> <!-- brand item -->
-                </div>
-                <div class="col-lg-3">
-                    <div class="brand-item text-center">
-                        <a href="#"><img src="assets/images/brand-2.png" alt=""></a>
-                    </div> <!-- brand item -->
-                </div>
-                <div class="col-lg-3">
-                    <div class="brand-item text-center">
-                        <a href="#"><img src="assets/images/brand-2.png" alt=""></a>
-                    </div> <!-- brand item -->
-                </div>
-                <div class="col-lg-3">
-                    <div class="brand-item text-center">
-                        <a href="#"><img src="assets/images/brand-2.png" alt=""></a>
-                    </div> <!-- brand item -->
-                </div>
-                <div class="col-lg-3">
-                    <div class="brand-item text-center">
-                        <a href="#"><img src="assets/images/brand-2.png" alt=""></a>
-                    </div> <!-- brand item -->
-                </div>
-            </div> <!-- row -->
-        </div>
-    </div>
-
-    <!--====== BRAND PART ENDS ======-->
+   
 
     <!--====== FAQ PART START ======-->
 
@@ -1467,7 +1626,15 @@ Su uso y aplicación me ahorra tiempo espacio y me brinda seguridad y seguimient
     </section>
 
     <!--====== FAQ PART ENDS ======-->
+<!-- Google tag (gtag.js) 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BJMR8PYFXG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-BJMR8PYFXG');
+</script>  -->
 <!--====== SUBSCRIBE PART START ======-->
 <div id="demo" class="subscribe-area">
     <div class="container">
@@ -1496,7 +1663,7 @@ Su uso y aplicación me ahorra tiempo espacio y me brinda seguridad y seguimient
         <div class="col-lg-3 col-md-6">
           <div class="footer-about-1 mt-30">
             <a href="index.html">
-              <img src="assets/images/logo-2.png" alt="SyncroClinic" style="max-width: 180px;">
+              <img src="assets/images/logo-2.webp" alt="SyncroClinic" style="max-width: 180px;">
             </a>
             <p style="margin-top: 15px;">
               Llevar tu clínica con papeles sueltos o archivos desordenados te cuesta tiempo, dinero y pacientes. 
@@ -1630,6 +1797,62 @@ Su uso y aplicación me ahorra tiempo espacio y me brinda seguridad y seguimient
     display: none !important;
   }
 </style>
+<script>
+  // DataLayer mínimo (no carga GA todavía)
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  // (opcional) Consent por defecto mientras no cargue GA
+  gtag('consent','default',{ad_storage:'denied', analytics_storage:'granted'});
+
+  (function(){
+    var LOADED = false;
+    function loadGA(){
+      if(LOADED) return; LOADED = true;
+      var s = document.createElement('script');
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-BJMR8PYFXG';
+      s.async = true;
+      s.onload = function(){
+        gtag('js', new Date());
+        gtag('config', 'G-BJMR8PYFXG', {
+          transport_type: 'beacon', // o 'image'
+          anonymize_ip: true
+        });
+      };
+      document.head.appendChild(s);
+    }
+
+    // 1) Primer gesto del usuario
+    ['click','keydown','pointerdown','touchstart','scroll'].forEach(function(ev){
+      window.addEventListener(ev, loadGA, {once:true, passive:true});
+    });
+
+    // 2) Ocio tras 'load' (fallback)
+    window.addEventListener('load', function(){
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(loadGA, {timeout: 4000});
+      } else {
+        setTimeout(loadGA, 4000);
+      }
+    }, {once:true});
+  })();
+</script>
+<script>
+  (function(){
+    function loadFonts(){
+      if (document.getElementById('gf-inter')) return; // evita duplicados
+      var l = document.createElement('link');
+      l.id = 'gf-inter';
+      l.rel = 'stylesheet';
+      l.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap';
+      document.head.appendChild(l);
+    }
+    // 3 segundos después de que la página terminó de cargar
+    window.addEventListener('load', function(){
+      setTimeout(loadFonts, 3000);
+    }, { once:true });
+  })();
+</script>
+
 </body>
 
 </html>
