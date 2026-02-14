@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Home -->
+  <url>
+    <loc>https://syncroclinic.com/</loc>
+    <lastmod>2025-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://syncroclinic.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://syncroclinic.com/index-en.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://syncroclinic.com/index-pt.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://syncroclinic.com/"/>
+  </url>
+
+  <!-- Home EN -->
+  <url>
+    <loc>https://syncroclinic.com/index-en.html</loc>
+    <lastmod>2025-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://syncroclinic.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://syncroclinic.com/index-en.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://syncroclinic.com/index-pt.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://syncroclinic.com/"/>
+  </url>
+
+  <!-- Home PT -->
+  <url>
+    <loc>https://syncroclinic.com/index-pt.html</loc>
+    <lastmod>2025-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://syncroclinic.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://syncroclinic.com/index-en.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://syncroclinic.com/index-pt.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://syncroclinic.com/"/>
+  </url>
+
+  <!-- Precios / Pricing / Preços -->
+  <url>
+    <loc>https://syncroclinic.com/precios.html</loc>
+    <lastmod>2025-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://syncroclinic.com/precios.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://syncroclinic.com/pricing-en.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://syncroclinic.com/precos-pt.html"/>
+  </url>
+
+  <url>
+    <loc>https://syncroclinic.com/pricing-en.html</loc>
+    <lastmod>2025-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://syncroclinic.com/precios.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://syncroclinic.com/pricing-en.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://syncroclinic.com/precos-pt.html"/>
+  </url>
+
+  <url>
+    <loc>https://syncroclinic.com/precos-pt.html</loc>
+    <lastmod>2025-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://syncroclinic.com/precios.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://syncroclinic.com/pricing-en.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://syncroclinic.com/precos-pt.html"/>
+  </url>
+
+  <!-- Demo -->
+  <url>
+    <loc>https://syncroclinic.com/demo.html</loc>
+    <lastmod>2025-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://syncroclinic.com/demo.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://syncroclinic.com/demo-en.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://syncroclinic.com/demo-pt.html"/>
+  </url>
+
+  <url>
+    <loc>https://syncroclinic.com/demo-en.html</loc>
+    <lastmod>2025-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://syncroclinic.com/demo.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://syncroclinic.com/demo-en.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://syncroclinic.com/demo-pt.html"/>
+  </url>
+
+  <url>
+    <loc>https://syncroclinic.com/demo-pt.html</loc>
+    <lastmod>2025-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://syncroclinic.com/demo.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://syncroclinic.com/demo-en.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://syncroclinic.com/demo-pt.html"/>
+  </url>
+
+</urlset>

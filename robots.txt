@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /html/saasly/
+
+Allow: /blog/
+Allow: /blog/*
+
+Sitemap: https://syncroclinic.com/sitemap.xml
+Sitemap: https://syncroclinic.com/blog/sitemap_index.xml
