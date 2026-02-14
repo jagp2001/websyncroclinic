@@ -3,6 +3,121 @@
 
     "use strict";
 
+    /*===============================
+         Language routing + app links
+    ================================*/
+    (function () {
+        var SUPPORTED_LANGUAGES = ['es', 'en', 'pt'];
+        var DEFAULT_LANGUAGE = 'en';
+        var LANGUAGE_KEY = 'syncroclinic_language';
+        var APP_BASE_URL = 'https://app.syncroclinic.com/';
+        var PAGE_GROUPS = {
+            home: {
+                es: 'index.html',
+                en: 'index-en.html',
+                pt: 'index-pt.html'
+            },
+            demo: {
+                es: 'demo.html',
+                en: 'demo-en.html',
+                pt: 'demo-pt.html'
+            },
+            pricing: {
+                es: 'precios.html',
+                en: 'pricing-en.html',
+                pt: 'precos-pt.html'
+            }
+        };
+
+        function normalizeLanguage(rawLanguage) {
+            var value = (rawLanguage || '').toLowerCase();
+
+            if (value.indexOf('es') === 0) return 'es';
+            if (value.indexOf('pt') === 0) return 'pt';
+            if (value.indexOf('en') === 0) return 'en';
+
+            return DEFAULT_LANGUAGE;
+        }
+
+        function getCurrentPageLanguage() {
+            var langFromHtml = document.documentElement.getAttribute('lang');
+            return normalizeLanguage(langFromHtml);
+        }
+
+        function getPreferredLanguage() {
+            var storedLanguage = localStorage.getItem(LANGUAGE_KEY);
+            if (storedLanguage && SUPPORTED_LANGUAGES.indexOf(storedLanguage) > -1) {
+                return storedLanguage;
+            }
+
+            var browserLanguage = '';
+            if (navigator.languages && navigator.languages.length) {
+                browserLanguage = navigator.languages[0];
+            } else {
+                browserLanguage = navigator.language || navigator.userLanguage || '';
+            }
+
+            return normalizeLanguage(browserLanguage);
+        }
+
+        function getPageGroup(pathname) {
+            var filename = pathname.split('/').pop() || 'index.html';
+
+            if (filename === '' || filename === 'index.html' || filename === 'index-en.html' || filename === 'index-pt.html') {
+                return 'home';
+            }
+
+            if (filename === 'demo.html' || filename === 'demo-en.html' || filename === 'demo-pt.html') {
+                return 'demo';
+            }
+
+            if (filename === 'precios.html' || filename === 'pricing-en.html' || filename === 'precos-pt.html') {
+                return 'pricing';
+            }
+
+            return null;
+        }
+
+        function shouldRedirectToPreferredLanguage() {
+            var pageGroup = getPageGroup(window.location.pathname);
+            if (!pageGroup) return;
+
+            var currentLanguage = getCurrentPageLanguage();
+            var preferredLanguage = getPreferredLanguage();
+            var targetPath = PAGE_GROUPS[pageGroup][preferredLanguage];
+            var currentPath = window.location.pathname.split('/').pop() || 'index.html';
+
+            if (!targetPath || currentPath === targetPath || currentLanguage === preferredLanguage) return;
+
+            window.location.replace('/' + targetPath + window.location.search + window.location.hash);
+        }
+
+        function updateAppLinks(language) {
+            var anchors = document.querySelectorAll('a[href^="' + APP_BASE_URL + '"]');
+            anchors.forEach(function (anchor) {
+                var url = new URL(anchor.href);
+                url.searchParams.set('lng', language);
+                anchor.href = url.toString();
+            });
+        }
+
+        function setupLanguageSelectionPersistence() {
+            var languageLinks = document.querySelectorAll('.lang-link');
+            languageLinks.forEach(function (link) {
+                link.addEventListener('click', function () {
+                    var textLanguage = normalizeLanguage(link.textContent);
+                    localStorage.setItem(LANGUAGE_KEY, textLanguage);
+                });
+            });
+        }
+
+        var currentLanguage = getCurrentPageLanguage();
+        localStorage.setItem(LANGUAGE_KEY, currentLanguage);
+        updateAppLinks(currentLanguage);
+        setupLanguageSelectionPersistence();
+        shouldRedirectToPreferredLanguage();
+    })();
+
 
     /*===============================  
          Prealoder
